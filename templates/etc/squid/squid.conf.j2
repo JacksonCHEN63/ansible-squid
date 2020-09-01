@@ -97,8 +97,3 @@ cache_peer {{ item.host }} {{ item.type }} {{ item.proxy_port}} {{ item.icp_port
 shutdown_lifetime {{squid_shutdown_lifetime}}{% else %}
 {% endif %}
 
-{% if (squid_suppress_version is defined and squid_suppress_version) or squid_suppress_version is not defined %}
-httpd_suppress_version_string on
-logformat nreporter %ts.%03tu %>a %Ss/%03Hs %<st %rm %ru %un %Sh/%<A %mt
-access_log daemon:/var/log/squid/access.log nreporter
-{% endif %}
