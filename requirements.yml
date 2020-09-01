@@ -1,0 +1,3 @@
+- src: https://github.com/JacksonCHEN63/ansible-squid.git
+  version: master
+  name: ansible-squid
